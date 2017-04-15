@@ -1,0 +1,55 @@
+body{
+  background-color:#ef4f4f;
+}
+#wrapper{
+  margin:60px auto;
+  width:75%;
+  background-color:black;
+  color:#FFF;
+}
+#header{
+  margin:0px;
+  padding-left:5%;
+  width:95%;
+  background-color:#ad9696;
+}
+#prompt{
+  font-size:20px;
+  overflow-y:auto;
+  overflow-x:hidden;
+  height:15em;
+}
+#options{
+  font-size:20px;
+  overflow:hidden;
+  height:2em;
+}
+ #options ul{
+  margin:.4em;
+  padding:0px;
+  list-style-type:none;
+}
+#options li{
+  display: inline-block;
+  margin:0px .3em;
+  border-right: solid #FFF 1px;
+  padding-right: 1em;
+}
+.division{
+  margin:0px auto;
+  padding: 0px 14%;
+  width:70%;
+  background-color:black;
+  border-bottom: #8e8989 solid 2px;
+}
+#commands, #commands:focus {
+  color:#FFF;
+  font-size:25px;
+  margin: 10px auto;
+  display:block;
+  width:98%;
+  height:1.5em;
+  background-color:black;
+  border: none;
+  outline:none;
+}
