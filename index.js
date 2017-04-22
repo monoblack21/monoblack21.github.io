@@ -43,7 +43,7 @@ function nextObj(){
         l1b.promptMe = [{text: "Teacher: " + name + " are you paying attention!"}]
         currentObj = l1b;
         set(currentObj);
-    }else if(currentObj.use == "story"){
+    }else if(currentObj.use == "interactive"){
         currentObj.run(wrapper.comm);
     }
 }
