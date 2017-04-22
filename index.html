@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>The rhetorical race</title>
+
+		<script src="j-objects.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="wrapper">
+	  	<h1 id="header">The rhetorical race : {{level}}</h1>
+	  <div id="prompt" class="division">
+	    <p v-for="m in promptMe">{{m.text}}</p>
+	  </div>
+	  <div id="options" class="division">
+		  <ul>
+		    <li>choose:</li>
+		    <li v-for="pr in opt">{{pr.text}}</li>
+		  </ul>
+		</div>
+		  <input autofocus v-on:keypress="enterPressed" v-model="comm" type="text" id="commands">
+		</div>
+
+		<script src="https://unpkg.com/vue"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
