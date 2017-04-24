@@ -40,10 +40,13 @@ var name = "";
 function nextObj(){
     if(currentObj.use == "special"){
         name =  wrapper.comm.substring(0);
-        l1b.promptMe = [{text: "Teacher: " + name + " are you paying attention!"}]
+        l1b.promptMe = [{text: "Teacher: " + name + " are you paying attention!"}];
         currentObj = l1b;
         set(currentObj);
     }else if(currentObj.use == "interactive"){
+        currentObj.run(wrapper.comm);
+    }else if(currentObj.use == "story"){
+        wrapper.level += ": " + currentObj.use;
         currentObj.run(wrapper.comm);
     }
 }

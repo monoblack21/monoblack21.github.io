@@ -12,7 +12,7 @@ var currentObj = l1a;
 
 var l1b = {
   use:"interactive",
-  level: "1: intoduction",
+  level: "1: introduction",
   opt:[
     {text: "yes"},
     {text: "no"},
@@ -35,7 +35,7 @@ var l1b = {
     }
   }
 
-}
+};
 
 var l1c_a = {
   use:"interactive",
@@ -57,7 +57,7 @@ var l1c_a = {
             wrapper.promptMe.push({text:"~" + text + " is not an option"});
         }
     }
-}
+};
 
 var l1c_b = {
   use:"interactive",
@@ -80,7 +80,7 @@ var l1c_b = {
         }
     }
 
-}
+};
 
 var l1d = {
    use:"interactive",
@@ -117,7 +117,7 @@ var l1e = {
        set(l2a);
        currentObj = l2a;
    }
-}
+};
 
 // ------ Level 2------
 var l2a = {
@@ -139,7 +139,7 @@ var l2a = {
         }
 
     }
-}
+};
 
 var l2b = {
     use:"interactive",
@@ -165,7 +165,7 @@ var l2b = {
         }
 
     }
-}
+};
 
 var l2c_a = {
     use:"interactive",
@@ -187,7 +187,7 @@ var l2c_a = {
         }
 
     }
-}
+};
 
 var l2c_b = {
     use:"interactive",
@@ -208,7 +208,7 @@ var l2c_b = {
         }
 
     }
-}
+};
 
 var l2d = {
     use:"interactive",
@@ -230,23 +230,117 @@ var l2d = {
         }
 
     }
-}
+};
+
 var l2e = {
     use:"interactive",
     level: "2",
     promptMe:[
-        {text: ""},
+        {text: "Headset: Warning! neural networks for specimen Ayo Aloko are low in this region. Switching to story mode."},
+        {text: "Headset: Tip - Since story mode allows for less interactivity, it makes it easier to digest information you have figured out so far."}
     ],
-    opt:[{text:"look at mirror"}],
+    opt:[{text:"enter story mode"}],
     run:function(text){
         switch(text.toLowerCase()){
-        case "got to 11 blue":
-            set(l2e);
-            currentObj = l2e;
+        case "enter story mode":
+            set(l2f);
+            currentObj = l2f;
             break;
         default:
             wrapper.promptMe.push({text:"~" + text + " is not an option"});
         }
 
     }
-}
+};
+
+var l2f ={
+    use:"story",
+    level: "2",
+    promptMe:[
+        {text: "You currently have the same perspective as Ayo Aloko. As you enter the room with the label 11 blue, you take a glance around the room. It seems that most people are at their desks writing something."},
+        {text: "You reach for a purple bag. On opening it, there is further searching being done for a note book. The name on the note book is Ayo Aloko. You go on to rip a middle page and then proceed to take a pen. You take a seat at a desk an proceed to scribble things down "}
+    ],
+    opt:[{text: "Press any letter then enter to continue"}],
+    run:function(){
+            set(l2g);
+            currentObj = l2g;
+    }
+};
+
+var l2g ={
+    use:"story",
+    level: "2",
+    promptMe:[
+        {text: "It seems to be a list."},
+        {text: "1. Student support"},
+        {text: "2. Teacher support"},
+        {text: "3. Local management support"},
+        {text: "Methods and strategy"},
+        {text: "1. Charisma to show I can handle public speeches"},
+        {text: "2. Use work done around school to show responsibility"},
+        {text: "3. keep under the 10 min mark."},
+        {text: "Teacher: clicker point---which do you think he focuses more on Logos or ethos?"},
+    ],
+    opt:[{text: "logos"},
+         {text: "ethos"}
+        ],
+    run:function(text){
+        switch(text.toLowerCase()){
+        case "logos":
+            set(l2h_a);
+            currentObj = l2h_a;
+            break;
+        case "ethos":
+            set(l2h_b);
+            currentObj = l2h_b;
+            break;
+        default:
+            wrapper.promptMe.push({text:"~" + text + " is not an option"});
+        }
+
+    }
+};
+
+var l2h_a ={
+    use:"story",
+    level: "2",
+    promptMe:[
+        {text: "Logos? For the most part, Ayo is trying to make an argument of some sort and is mostly relying on his past actions and credibility"},
+    ],
+    opt:[{text: "Press any letter then enter to continue"}],
+    run:function(){
+        set(l2i);
+        currentObj = l2i;
+    }
+};
+
+var l2h_b ={
+    use:"story",
+    level: "2",
+    promptMe:[
+        {text: "Yes! For the most part, Ayo is trying to make an argument of some sort and is mostly relying on his past actions and credibility"},
+    ],
+    opt:[{text: "Press any letter then enter to continue"}],
+    run:function(){
+        set(l2i);
+        currentObj = l2i;
+    }
+};
+
+var l2i ={
+    use:"story",
+    level: "2",
+    promptMe:[
+        {text: "You look up and see a boy approaching you from the right.However, he is grinning from cheek to cheek and looks very mischievous."},
+        {text: "boy: Aloko how's your Head Boy speech coming along"},
+        {text: "You: Well I've narrowed down the way i want to attack the situation but don't know how to actually get the words down. David help me."},
+        {text: " Hmm it seems the boy's name is David"},
+        {text: "David: Why don't you try to free style a first version and then revise it with your goals in mind."},
+        {text: "You: Wow David you are a genius thanks!"}
+    ],
+    opt:[{text: "Press any letter then enter to continue"}],
+    run:function(){
+        set(l2i);
+        currentObj = l2i;
+    }
+};
