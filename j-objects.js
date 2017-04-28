@@ -118,6 +118,8 @@ var l1e = {
        set(l2a);
        currentObj = l2a;
        wrapper.elm = "";
+       first.pause();
+       second.play();
    }
 };
 
@@ -344,6 +346,8 @@ var l2i ={
     run:function(){
         set(l3a);
         currentObj = l3a;
+        second.pause();
+        thrid.play();
     }
 };
 
@@ -555,12 +559,14 @@ var l3j ={
     run:function(){
         set(l4a);
         currentObj = l4a;
+        third.pause();
+        fourth.play();
     }
 };
 
 var l4a ={
     use:"story",
-    level: "3",
+    level:"4",
     promptMe:[
       {text: "Teacher: so students that was your first experience in the simulator"},
       {text: "Teacher: Was there any difference between what you saw and learned about Ayo Aloko in class last week"},
@@ -574,7 +580,7 @@ var l4a ={
 
 var l4b ={
     use:"story",
-    level: "3",
+    level:"4",
     promptMe:[
       {text: "A kid two seats down from your right raises his hand."},
       {text: "Teacher: Yes, donald?"},
@@ -590,7 +596,7 @@ var l4b ={
 
 var l4c ={
     use:"story",
-    level: "3",
+    level:"4",
     promptMe:[
       {text: "Teacher: as you can see he had these initial goals"},
       {text: "1. Student support"},
@@ -610,7 +616,7 @@ var l4c ={
 
 var l4d ={
     use:"story",
-    level: "3",
+    level:"4",
     promptMe:[
       {text: "Teacher: Those goals changed the speach form this "},
       {text: "Ayo is about to try to freestyle the speech to see where he needs to work on."},
@@ -641,7 +647,7 @@ var l4d ={
 
 var l4e ={
     use:"story",
-    level: "3",
+    level:"4",
     promptMe:[
       {text: "Teacher: As you all know this speach lead to a very succesfull outcome for Ayo Aloko, because he was able to advance to the next stage of elimination for the Head boy position."},
       {text: "Teacher: Well students next week we will begin to study the life of Genghis Khan. Class is dissmissed."},
@@ -651,12 +657,14 @@ var l4e ={
     run:function(){
         set(l4f);
         currentObj = l4f;
+        fourth.pause();
+        end.play();
     }
 };
 
 var l4f ={
     use:"story",
-    level: "3",
+    level:"4",
     promptMe:[
       {text: "|~~~~~~~~~~~~~~Le Fin~~~~~~~~~~~~~~~|"},
       {text: "Written by Ayokanmi Olaniyi Aloko"},    ],
