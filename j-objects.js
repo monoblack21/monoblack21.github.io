@@ -391,17 +391,11 @@ var l3c ={
         {text: "Time goes by and adjustments are made to make the speech more befitting for the crowd. Even a tiny element of humor was added in order to secure the students votes. It is currently the day of the election"},
         {text: "Headset: It seem the neural networks are stronger in this region of memory switch to interactive mode"},
     ],
-    opt:[{text: "switch to interactive mode"}],
+    opt:[{text: "press enter to switch to interactive mode"}],
     run:function(text){
-        switch(text.toLowerCase()){
-        case "switch to interactive mode":
             set(l3d);
             currentObj = l3d;
             break;
-        default:
-            wrapper.promptMe.push({text:"~" + text + " is not an option"});
-        }
-
     }
 };
 
@@ -524,7 +518,7 @@ var l3h ={
         {text: "and with that Ayo Aloko stands to give his speech"}
     ],
     opt:[{text: "press enter to continue"}],
-    run:function(text){
+    run:function(){
         set(l3i);
         currentObj = l3i;
     }
@@ -545,41 +539,41 @@ var l3i ={
       {text: "Ayo then turns his head to the vice principal and gives a friendly smile."},
     ],
     opt:[{text: "press enter to continue"}],
-    run:function(text){
+    run:function(){
         set(l3j);
         currentObj = l3j;
     }
 };
 
 var l3j ={
-    use:"interactive",
+    use:"story",
     level: "3",
     promptMe:[
       {text: "Headset: Time's up, ending simulation."}
     ],
     opt:[{text: "press enter to return back to the real world"}],
-    run:function(text){
+    run:function(){
         set(l4a);
         currentObj = l4a;
     }
 };
 
 var l4a ={
-    use:"interactive",
+    use:"story",
     level: "3",
     promptMe:[
       {text: "Teacher: so students that was your first experience in the simulator"},
       {text: "Teacher: Was there any difference between what you saw and learned about Ayo Aloko in class last week"},
     ],
     opt:[{text: "press enter to continue"}],
-    run:function(text){
+    run:function(){
         set(l4b);
         currentObj = l4b;
     }
 };
 
 var l4b ={
-    use:"interactive",
+    use:"story",
     level: "3",
     promptMe:[
       {text: "A kid two seats down from your right raises his hand."},
@@ -588,14 +582,14 @@ var l4b ={
       {text: "Teacher: Wow donald, that is correct! If you were paying attention you would see the difference between the final and first speech. Let us take a look at his goals for his speech then see how he revised the speech."},
     ],
     opt:[{text: "press enter to continue"}],
-    run:function(text){
+    run:function(){
         set(l4c);
         currentObj = l4c;
     }
 };
 
 var l4c ={
-    use:"interactive",
+    use:"story",
     level: "3",
     promptMe:[
       {text: "Teacher: as you can see he had these initial goals"},
@@ -608,14 +602,14 @@ var l4c ={
       {text: "3. keep under the 10 min mark."},
     ],
     opt:[{text: "press enter to continue"}],
-    run:function(text){
+    run:function(){
         set(l4d);
         currentObj = l4d;
     }
 };
 
 var l4d ={
-    use:"interactive",
+    use:"story",
     level: "3",
     promptMe:[
       {text: "Teacher: Those goals changed the speach form this "},
@@ -639,14 +633,14 @@ var l4d ={
 
     ],
     opt:[{text: "press enter to continue"}],
-    run:function(text){
+    run:function(){
         set(l4e);
         currentObj = l4e;
     }
 };
 
 var l4e ={
-    use:"interactive",
+    use:"story",
     level: "3",
     promptMe:[
       {text: "Teacher: As you all know this speach lead to a very succesfull outcome for Ayo Aloko, because he was able to advance to the next stage of elimination for the Head boy position."},
@@ -654,17 +648,17 @@ var l4e ={
 
     ],
     opt:[{text: "press enter to end"}],
-    run:function(text){
+    run:function(){
         set(l4f);
         currentObj = l4f;
     }
 };
 
 var l4f ={
-    use:"interactive",
+    use:"story",
     level: "3",
     promptMe:[
-      {text: "Le Fin"},
+      {text: "|~~~~~~~~~~~~~~Le Fin~~~~~~~~~~~~~~~|"},
       {text: "Written by Ayokanmi Olaniyi Aloko"},    ],
     opt:[{text: "press enter to do nothing"}],
 };
