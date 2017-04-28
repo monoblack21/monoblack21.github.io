@@ -392,7 +392,7 @@ var l3c ={
         {text: "Headset: It seem the neural networks are stronger in this region of memory switch to interactive mode"},
     ],
     opt:[{text: "switch to interactive mode"}],
-    run:function(){
+    run:function(text){
         switch(text.toLowerCase()){
         case "switch to interactive mode":
             set(l3d);
