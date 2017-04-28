@@ -5,6 +5,7 @@ var wrapper = new Vue({
     promptMe:[{text: "Type your name and press enter"}],
     opt:[],
     comm:"",
+    elm:"",
   },
     methods:{
         enterPressed: function(e){

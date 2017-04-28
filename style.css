@@ -1,6 +1,9 @@
 body{
   background-color:#ef4f4f;
 }
+img[src = "http://netdna.walyou.netdna-cdn.com/wp-content/uploads//2011/06/AsciiArt04.gif"]{
+  height:75%;
+}
 #wrapper{
   margin:60px auto;
   width:75%;
