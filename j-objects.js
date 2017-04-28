@@ -347,7 +347,7 @@ var l2i ={
         set(l3a);
         currentObj = l3a;
         second.pause();
-        thrid.play();
+        third.play();
     }
 };
 
