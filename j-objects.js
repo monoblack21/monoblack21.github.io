@@ -396,10 +396,9 @@ var l3c ={
         {text: "Headset: It seem the neural networks are stronger in this region of memory switch to interactive mode"},
     ],
     opt:[{text: "press enter to switch to interactive mode"}],
-    run:function(text){
+    run:function(){
             set(l3d);
             currentObj = l3d;
-            break;
     }
 };
 
